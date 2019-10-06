@@ -1,0 +1,91 @@
+﻿@model VersionDoc.Models.UploadInfo
+@{
+    ViewData["Title"] = "Upload";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="text-center">Upload Documents<a href="#helpModal" data-toggle="modal" data-target="#helpModal"><span class="pull-right glyphicon glyphicon-question-sign" style="color:dodgerblue; font-size:larger"></span></a></h3>
+<p class="text-center" style="color:dodgerblue; font-size:medium">
+    This page is used to upload your files to the repository.
+    You can browse a file to upload, select if it is a private or public document and
+    if the document is private, select the users you want to share it with
+</p>
+
+<br />
+
+<html>
+<body>
+    <form method="post" asp-controller="UploadDocument" asp-action="Upload" enctype="multipart/form-data">
+        <label style="font-size:medium; color:black">
+            Press the browse button and select the file you want to upload
+            (Supported files: .docx .xlxs .txt)
+        </label>
+        <input type="file" name="document" multiple class="form-control" />
+        <br />
+
+        @*</form>*@
+
+        @*<form>*@
+        <div class="form-horizontal">
+            <div class="form-group">
+                <li>
+                    <label style="font-size:medium; color:black">Do you want to make this document Private:  </label>
+                    <input type="checkbox" asp-for="Priv" id="Private" />
+                    <input type="hidden" />
+                </li>
+
+                <li>
+                    <label style="font-size:medium; color:black">Do you want to make this document Public:   </label>
+                    <input type="checkbox" asp-for="Pub" />
+                    <input type="hidden" />
+                </li>
+
+                <li>
+                    <label style="font-size:medium; color:black">Do you want to share this folder:   </label>
+                    <input type="checkbox" asp-for="shared" id="Shared" onchange="valueChanged()" checked/>
+                    <input type="hidden" />
+                </li>
+            </div>
+
+            <div class="form-group" id="sharedUser">
+                <label class="control-label" style="font-size:medium; color:black">Please select the users you want to share your private document with:</label>
+                <input asp-for="UserEmail" class="form-control" />
+            </div>
+        </div>
+
+        <input type="submit" value="Upload Document" class="btn btn-success" />
+    </form>
+
+    <script type="text/javascript">
+        function valueChanged() {
+            if ($('#Shared').is(":checked"))
+                $("#sharedUser").show();
+            else
+                $("#sharedUser").hide();
+        }
+    </script>
+
+</body>
+</html>
+
+<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" wfd-id="461">&times;</button>
+                <h4 class="modal-title">Help</h4>
+            </div>
+            <div class="modal-body" wfd-id="23">
+                <p>Here you can upload your files</p>
+                <p>You must first press the browse button to choose a file to upload</p>
+                <p>Then, you must select if the file is going to be private or public</p>
+                <p>If the file is going to be private then you have the option to share it with another user</p>
+                <p>Enter the persons email address you want to share the file with, only one person can be added when uploading the document, you can add more people by going to the private page and press edit</p>
+                <p>After all options are chosen, you can press the green Upload button</p>
+            </div>
+            <div class="modal-footer" wfd-id="22">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" wfd-id="460">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

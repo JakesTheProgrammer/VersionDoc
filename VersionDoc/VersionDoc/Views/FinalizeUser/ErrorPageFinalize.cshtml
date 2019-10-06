@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "ErrorPageFinalize";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="vertical-align:top; text-align:center; background-size:cover">
+    <img src="~/images/Error_Page.png" />
+</div>
+
+<div style="margin-left: auto; margin-right: auto; text-align: center; height:400px"">
+    <label style="font-size:large; color:red">@ViewBag.error</label><br />
+    <label style="font-size:large; color:red">You will be redirected to the previous page after 5 seconds</label>
+</div>
+
+<script type="text/javascript">
+        window.setTimeout(function () {
+            window.location.href = '@Url.Action("FinalizeReg", "FinalizeUser")';
+    }, 6000);
+</script>
+

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<VersionDoc.Models.File>
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "PublicDocuments";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="text-center">Public Documents<a href="#helpModal" data-toggle="modal" data-target="#helpModal"><span class="pull-right glyphicon glyphicon-question-sign" style="color:dodgerblue; font-size:larger"></span></a></h3>
+<p class="text-center" style="color:dodgerblue; font-size:medium">
+    This is a public space. All these documents can be downloaded and changed by any user. Logs can be viewed to
+    show the users that changed the document and reuploaded it
+</p>
+<hr />
+
+<div class="container-fluid" style="height:400px; overflow:auto">
+    <table class="table table-striped table-hover table-responsive">
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th>Size(KB)</th>
+                <th>File Type</th>
+                <th>Uploaded Date</th>
+                <th>Creator</th>
+                <th>Download</th>
+                <th>Log</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var doc in Model.Where(e => e.FilePermission == 0))
+            {
+            <tr>
+                <td>@doc.FileName</td>
+                <td>@doc.FileSize</td>
+                <td>@doc.FileType</td>
+                <td>@doc.FileUploadDate</td>
+                <td>@doc.User.UserFirstName</td>
+                <td><a asp-controller="UploadDocument" asp-action="downloadFile" asp-route-id="@doc.FileId" asp-route-type="Public" asp-route-email="@doc.User.UserEmail"><span class="glyphicon glyphicon-download-alt" style="font-size:large; color:black"></span></a></td>
+                <td><a asp-controller="PublicDocuments" asp-action="Log" asp-route-id="@doc.FileId"><span class="glyphicon glyphicon glyphicon-list-alt text-center" style="font-size:large; color:black"></span></a></td>
+            </tr>
+            }
+            </tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" wfd-id="461">&times;</button>
+                <h4 class="modal-title">Help</h4>
+            </div>
+            <div class="modal-body" wfd-id="23">
+                <p>All public documents created by all the users are availiable here</p>
+                <p>Here you can choose to download the file or view the log to see who made changes to the document</p>
+                <p>Press on the dowload icon to download the file immediatly or press the log icon to take you to that specific file log</p>
+            </div>
+            <div class="modal-footer" wfd-id="22">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" wfd-id="460">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

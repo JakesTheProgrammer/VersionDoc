@@ -1,0 +1,24 @@
+C:\Users\Jaco\Desktop\Web\VersionDoc\VersionDoc\bin\Debug\netcoreapp2.0\VersionDoc.deps.json
+C:\Users\Jaco\Desktop\Web\VersionDoc\VersionDoc\bin\Debug\netcoreapp2.0\VersionDoc.runtimeconfig.json
+C:\Users\Jaco\Desktop\Web\VersionDoc\VersionDoc\bin\Debug\netcoreapp2.0\VersionDoc.runtimeconfig.dev.json
+C:\Users\Jaco\Desktop\Web\VersionDoc\VersionDoc\bin\Debug\netcoreapp2.0\VersionDoc.dll
+C:\Users\Jaco\Desktop\Web\VersionDoc\VersionDoc\obj\Debug\netcoreapp2.0\VersionDoc.csprojAssemblyReference.cache
+C:\Users\Jaco\Desktop\Web\VersionDoc\VersionDoc\obj\Debug\netcoreapp2.0\VersionDoc.csproj.CoreCompileInputs.cache
+C:\Users\Jaco\Desktop\Web\VersionDoc\VersionDoc\obj\Debug\netcoreapp2.0\VersionDoc.AssemblyInfoInputs.cache
+C:\Users\Jaco\Desktop\Web\VersionDoc\VersionDoc\obj\Debug\netcoreapp2.0\VersionDoc.AssemblyInfo.cs
+C:\Users\Jaco\Desktop\Web\VersionDoc\VersionDoc\bin\Debug\netcoreapp2.0\VersionDoc.pdb
+C:\Users\Jaco\Desktop\Web\VersionDoc\VersionDoc\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Jaco\Desktop\Web\VersionDoc\VersionDoc\obj\Debug\netcoreapp2.0\VersionDoc.dll
+C:\Users\Jaco\Desktop\Web\VersionDoc\VersionDoc\obj\Debug\netcoreapp2.0\VersionDoc.pdb
+D:\Project 3\mvc_project3\VersionDoc\VersionDoc\bin\Debug\netcoreapp2.0\VersionDoc.deps.json
+D:\Project 3\mvc_project3\VersionDoc\VersionDoc\bin\Debug\netcoreapp2.0\VersionDoc.runtimeconfig.json
+D:\Project 3\mvc_project3\VersionDoc\VersionDoc\bin\Debug\netcoreapp2.0\VersionDoc.runtimeconfig.dev.json
+D:\Project 3\mvc_project3\VersionDoc\VersionDoc\bin\Debug\netcoreapp2.0\VersionDoc.dll
+D:\Project 3\mvc_project3\VersionDoc\VersionDoc\bin\Debug\netcoreapp2.0\VersionDoc.pdb
+D:\Project 3\mvc_project3\VersionDoc\VersionDoc\obj\Debug\netcoreapp2.0\VersionDoc.csprojAssemblyReference.cache
+D:\Project 3\mvc_project3\VersionDoc\VersionDoc\obj\Debug\netcoreapp2.0\VersionDoc.csproj.CoreCompileInputs.cache
+D:\Project 3\mvc_project3\VersionDoc\VersionDoc\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\Project 3\mvc_project3\VersionDoc\VersionDoc\obj\Debug\netcoreapp2.0\VersionDoc.AssemblyInfoInputs.cache
+D:\Project 3\mvc_project3\VersionDoc\VersionDoc\obj\Debug\netcoreapp2.0\VersionDoc.AssemblyInfo.cs
+D:\Project 3\mvc_project3\VersionDoc\VersionDoc\obj\Debug\netcoreapp2.0\VersionDoc.dll
+D:\Project 3\mvc_project3\VersionDoc\VersionDoc\obj\Debug\netcoreapp2.0\VersionDoc.pdb

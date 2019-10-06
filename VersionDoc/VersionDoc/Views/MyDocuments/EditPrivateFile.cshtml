@@ -1,0 +1,37 @@
+﻿@model VersionDoc.Models.UploadInfo
+@{
+    ViewData["Title"] = "EditPrivateFile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="text-center">Edit<a href="#helpModal" data-toggle="modal" data-target="#helpModal"><span class="pull-right glyphicon glyphicon-question-sign" style="color:dodgerblue; font-size:larger"></span></a></h3>
+<p class="text-center" style="color:dodgerblue; font-size:medium">
+    Here you can add more people to your file
+</p>
+
+<form asp-controller="MyDocuments" asp-action="EditPrivateFile" method="post">
+    <div class="container-fluid">
+        <label class="control-label" style="font-size:medium; color:black">Please select the users you want to share your private document with:</label>
+        <input asp-for="UserEmail" class="form-control" /><br />
+    </div>
+    <input type="submit" value="Share with User" class="btn btn-success" />
+</form>
+
+<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" wfd-id="461">&times;</button>
+                <h4 class="modal-title">Help</h4>
+            </div>
+            <div class="modal-body" wfd-id="23">
+                <p>Here you can add users to your file</p>
+                <p>Fill in the users email address and press the share button</p>
+                <p>Only one user can be added at a time</p>
+            </div>
+            <div class="modal-footer" wfd-id="22">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" wfd-id="460">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

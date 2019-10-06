@@ -1,0 +1,35 @@
+﻿@model IEnumerable< VersionDoc.Models.Log>
+@{
+        ViewData["Title"] = "PublicLog";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+<h3 class="text-center">Log</h3>
+<p class="text-center" style="color:dodgerblue; font-size:medium">
+    This is the Log page, where you can view all the information
+    about the versions that was made for a specific document
+</p>
+
+<div class="container-fluid" style="height:400px">
+    <table class="table table-striped table-hover table-responsive">
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th>Uploader</th>
+                <th>Uploaded Date</th>
+                <th>Size</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var doc in Model.Where(m => m.FileId == ViewBag.id))
+            { 
+        <tr>
+            <td>@doc.File.FileName</td>
+            <td>@doc.LogUploader</td>
+            <td>@doc.LogDateTime</td>
+            <td>@doc.LogSize</td>
+        </tr>
+            }
+        </tbody>
+    </table>
+</div>

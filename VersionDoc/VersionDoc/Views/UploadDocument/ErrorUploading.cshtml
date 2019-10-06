@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "ErrorUploading";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>ErrorUploading</h2>*@
+
+<div style="vertical-align:top; text-align:center; background-size:cover">
+    <img src="~/images/Error_Upload_Document.png" />
+</div>
+
+<div style="margin-left: auto; margin-right: auto; text-align: center; height:400px">
+    <label style="font-size:large; color:red">@ViewBag.error</label><br />
+    <label style="font-size:large; color:red">You will be redirected to the previous page after 6 seconds</label>
+</div>
+    
+<script type="text/javascript">
+        window.setTimeout(function () {
+            window.location.href = '@Url.Action("Upload", "UploadDocument")';
+    }, 6000);
+</script>

@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "succsesfullSharedAdded";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="text-center">New user added to your file</h3>
+
+<label></label>
+
+<div style="vertical-align:top; text-align:center; background-size:cover">
+    <img src="~/images/FinalFileUploadFinished.png" />
+</div>
+
+<div style="margin-left: auto; margin-right: auto; text-align: center; height:400px">
+    <label></label>
+    <label></label>
+    <label style="font-size:large; color:black">You will be redirected to the previous page after 3 seconds</label>
+</div>
+
+<script type="text/javascript">
+        window.setTimeout(function () {
+            window.location.href = '@Url.Action("MyPrivateDocuments", "MyDocuments")';
+    }, 3000);
+</script>
+

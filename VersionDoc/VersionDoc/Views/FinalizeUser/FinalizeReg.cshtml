@@ -1,0 +1,83 @@
+﻿@model VersionDoc.Models.UserDetail
+@{
+    ViewData["Title"] = "FinalizeReg";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="vertical-align:top; text-align:center">
+    <img src="~/images/New-Wesite-webgrids.com-.png" />
+</div>
+@*<h3 class="text-center">Finalize Registration</h3>*@
+<p class="text-center" style="color:dodgerblue; font-size:large">
+    THANK YOU
+    for choosing VersionDoc as your document Version Control.
+    We are almost ready for your documents, but first...
+</p>
+
+<div class="row">
+        <form class="container-fluid" asp-controller="FinalizeUser" asp-action="FinalizeReg" method="post">
+            @*<div class="form-horizontal">*@
+                
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="col-lg-4">
+                            <label style="font-size:medium; color:black"> Title: </label>
+                            <input class="form-control input-sm" id="UserFirstName" type="text" /><br>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="col-lg-6">
+                            <label style="font-size:medium; color:black"> First Name: </label>
+                            <input asp-for="UserFirstName" class="form-control input-sm" id="UserFirstName" type="text" /><br>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="col-lg-6">
+                            <label style="font-size:medium; color: black"> Last Name:</label>
+                            <input asp-for="UserLastName" class="form-control input-sm" /><br>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="col-lg-6">
+                            <label style="font-size:medium; color:black"> Country: </label>
+                            <select class="form-control" id="Contries" name="Countries">
+                                <option>USA</option>
+                                <option>UK</option>
+                                <option>Germany</option>
+                                <option>Japan</option>
+                                <option>Canada</option>
+                                <option>South Africa</option>
+                                <option>Spain</option>
+                                <option>China</option>
+                                <option>Brazil</option>
+                                <option>Netherlands</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-10">
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <br />
+                            <input class="btn btn-success" id="Submit" name="Submit" type="submit" value="Complete" /><br>
+                        </div>
+                    </div>
+                </div>
+</form>
+
+    @*<div class="col-md-5" style="text-align:center">
+        <img src="~/images/New-Wesite-webgrids.com-.png" />
+    </div>*@
+
+</div>
+
